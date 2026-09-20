@@ -69,9 +69,89 @@ SYSTEM_PROMPT: Dict[str, str] = {
     ),
 }
 
+#: My own support request for Core Task 1.
+TRANSFER_NOTICE: Dict[str, str] = {
+    "en": (
+        "Yesterday I sent money to another bank, but the transfer is still pending. "
+        "The amount was deducted from my account. Please check the transfer status "
+        "and tell me when the money will arrive."
+    ),
+    "ru": (
+        "Вчера я отправил деньги в другой банк, но перевод всё ещё находится в обработке. "
+        "Сумма была списана с моего счёта. Пожалуйста, проверьте статус перевода "
+        "и сообщите, когда поступят деньги."
+    ),
+    "kk": (
+        "Кеше мен басқа банкке ақша аудардым, бірақ аударым әлі өңделіп жатыр. "
+        "Сома менің шотымнан алынды. Аударымның мәртебесін тексеріп, "
+        "ақшаның қашан түсетінін хабарлаңыз."
+    ),
+}
+
+#: Kazakh sentence using only Cyrillic letters shared with Russian.
+KAZAKH_SHARED: Dict[str, str] = {
+    "en": (
+        "The bank will inform the client about the card, and the operator "
+        "will write an answer about the account and status."
+    ),
+    "ru": (
+        "Банк сообщит клиенту о карте, а оператор напишет ответ "
+        "о счёте и статусе."
+    ),
+    "kk": (
+        "Банк клиентке карта туралы хабар берер, ал оператор "
+        "шот пен статус туралы жауап жазар."
+    ),
+}
+
+#: Kazakh sentence rich in Kazakh-specific letters.
+KAZAKH_SPECIFIC: Dict[str, str] = {
+    "en": (
+        "The administration checked the processing status of the request today "
+        "and explained the change concerning the payment and document."
+    ),
+    "ru": (
+        "Администрация сегодня проверила статус обработки обращения "
+        "и объяснила изменение, связанное с платежом и документом."
+    ),
+    "kk": (
+        "Әкімшілік өтініштің өңделу жағдайын бүгін тексеріп, "
+        "төлем мен құжат жөніндегі өзгерісті түсіндірді."
+    ),
+}
+
+#: Complaint represented as JSON instead of prose.
+COMPLAINT_JSON: Dict[str, str] = {
+    "en": (
+        '{"greeting":"Good afternoon.","deposit":"I opened a deposit at your branch in March '
+        'and was told the rate was fixed for twelve months.","change":"In August the rate on '
+        'my account dropped without any notice.","attachments":"I have attached the contract '
+        'and the statement.","request":"Please explain on what basis the rate was changed and '
+        'restore the original terms."}'
+    ),
+    "ru": (
+        '{"greeting":"Добрый день.","deposit":"Я открыл депозит в вашем отделении в марте, '
+        'и мне сказали, что ставка зафиксирована на двенадцать месяцев.","change":"В августе '
+        'ставка по моему счёту снизилась без какого-либо уведомления.","attachments":"Прилагаю '
+        'договор и выписку.","request":"Прошу объяснить, на каком основании была изменена '
+        'ставка, и восстановить первоначальные условия."}'
+    ),
+    "kk": (
+        '{"greeting":"Қайырлы күн.","deposit":"Мен наурыз айында сіздің бөлімшеңізде депозит '
+        'аштым, маған мөлшерлеме он екі айға бекітілген деп айтылды.","change":"Тамыз айында '
+        'менің шотымдағы мөлшерлеме ешқандай хабарламасыз төмендеді.","attachments":"Шартты '
+        'және үзінді көшірмені қоса тіркеп отырмын.","request":"Мөлшерлеме қандай негізде '
+        'өзгертілгенін түсіндіріп, бастапқы шарттарды қалпына келтіруіңізді сұраймын."}'
+    ),
+}
+
 #: Everything the lab measures, keyed by a short id.
 CORPUS: Dict[str, Dict[str, str]] = {
     "sentence": SENTENCE,
     "complaint": COMPLAINT,
     "system_prompt": SYSTEM_PROMPT,
+    "transfer_notice": TRANSFER_NOTICE,
+    "kazakh_shared": KAZAKH_SHARED,
+    "kazakh_specific": KAZAKH_SPECIFIC,
+    "complaint_json": COMPLAINT_JSON,
 }
